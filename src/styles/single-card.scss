@@ -1,0 +1,15 @@
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.card-front {
+  width: 70%;
+  height: 35%;
+}
+.card-back {
+  width: 70%;
+  height: 35%;
+  cursor: pointer;
+}
