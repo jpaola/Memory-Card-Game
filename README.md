@@ -1,15 +1,18 @@
 # Quick Intro
 
-This is a matching pairs, memory, concentration game using a deck of 52 cards (ref. https://en.wikipedia.org/wiki/Concentration_(card_game)). 
+This is a matching pairs, memory, concentration game using a deck of 52 cards (ref. https://en.wikipedia.org/wiki/Concentration_(card_game)).
 
-Rules to the game are simple. All cards are laid face down. In turn, each player chooses two cards and turns them face up. If they are of the same rank and color (e.g. six of hearts and six of diamonds, queen of clubs and queen of spades, or both jokers, if used) then that player wins the pair and plays again. If they are not of the same rank and color, they are turned face down again and play passes to the next player. 
+Rules to the game are simple. All cards are laid face down. In turn, each player chooses two cards and turns them face up. If they are of the same rank and color (e.g. six of hearts and six of diamonds, queen of clubs and queen of spades, or both jokers, if used) then that player wins the pair and plays again. If they are not of the same rank and color, they are turned face down again and play passes to the next player.
 
 In this game I introduced levels, which take into consideration the number of matches possible making it easier to work through bugs and testing functionality. There is room for improvement.
-
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Node
+
+This project uses Node v16.14.0. Any version higher than this will throw an error. See https://nodejs.org/en/.
 
 ## Available Scripts
 
