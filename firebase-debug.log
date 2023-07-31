@@ -1,0 +1,41 @@
+[debug] [2023-07-31T23:54:56.780Z] ----------------------------------------------------------------------
+[debug] [2023-07-31T23:54:56.782Z] Command:       /Users/jpaola/.nvm/versions/node/v16.14.0/bin/node /Users/jpaola/.nvm/versions/node/v16.14.0/bin/firebase deploy
+[debug] [2023-07-31T23:54:56.782Z] CLI Version:   12.4.2
+[debug] [2023-07-31T23:54:56.783Z] Platform:      darwin
+[debug] [2023-07-31T23:54:56.783Z] Node Version:  v16.14.0
+[debug] [2023-07-31T23:54:56.784Z] Time:          Mon Jul 31 2023 19:54:56 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-07-31T23:54:56.784Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-31T23:54:56.849Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"ignore"}
+[debug] [2023-07-31T23:54:56.855Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-31T23:54:56.856Z] > authorizing via signed-in user (jpaolababy@gmail.com)
+[debug] [2023-07-31T23:54:56.856Z] [iam] checking project memory-card-game-336b0 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-31T23:54:56.860Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/memory-card-game-336b0:testIamPermissions [none]
+[debug] [2023-07-31T23:54:56.860Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/memory-card-game-336b0:testIamPermissions x-goog-quota-user=projects/memory-card-game-336b0
+[debug] [2023-07-31T23:54:56.860Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/memory-card-game-336b0:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-31T23:54:57.090Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/memory-card-game-336b0:testIamPermissions 200
+[debug] [2023-07-31T23:54:57.091Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/memory-card-game-336b0:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-31T23:54:57.091Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/memory-card-game-336b0/serviceAccounts/memory-card-game-336b0@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-07-31T23:54:57.092Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/memory-card-game-336b0/serviceAccounts/memory-card-game-336b0@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-31T23:54:57.305Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/memory-card-game-336b0/serviceAccounts/memory-card-game-336b0@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-07-31T23:54:57.306Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/memory-card-game-336b0/serviceAccounts/memory-card-game-336b0@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-31T23:54:57.307Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/memory-card-game-336b0 [none]
+[debug] [2023-07-31T23:54:57.558Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/memory-card-game-336b0 200
+[debug] [2023-07-31T23:54:57.558Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/memory-card-game-336b0 {"projectId":"memory-card-game-336b0","projectNumber":"686260334968","displayName":"Memory Card Game","name":"projects/memory-card-game-336b0","resources":{"hostingSite":"memory-card-game-336b0"},"state":"ACTIVE","etag":"1_83cf051d-9a4a-4bc3-a074-f7bc93601840"}
+[info] 
+[info] === Deploying to 'memory-card-game-336b0'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-07-31T23:54:57.677Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:371:5)
+    at validateString (node:internal/validators:120:11)
+    at Object.join (node:path:1172:7)
+    at Config.path (/Users/jpaola/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/config.js:123:45)
+    at getChildEnvironment (/Users/jpaola/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:52:49)
+    at runTargetCommands (/Users/jpaola/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:73:14)
+    at /Users/jpaola/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:147:24
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async chain (/Users/jpaola/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/deploy/index.js:38:9)
+    at async deploy (/Users/jpaola/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/deploy/index.js:94:5)
+[error] 
+[error] Error: An unexpected error has occurred.
