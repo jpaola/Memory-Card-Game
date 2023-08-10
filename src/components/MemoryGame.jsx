@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import React from "react";
 import {Row, Col, Typography} from "antd";
 import {createDeck} from "../common";
 import SingleCard from "./SingleCard";
@@ -229,9 +230,8 @@ function MemoryGame() {
 							<Col
 								span={8}
 								offset={8}
-							>{`Total Matches: ${totalMatches}/${
-								deck.length / 2
-							}`}</Col>
+							>{`Total Matches: ${totalMatches}/${deck.length /
+								2}`}</Col>
 						</Row>
 						<Row>
 							<Col

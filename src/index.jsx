@@ -1,5 +1,5 @@
-import firebase from "firebase/compat/app";
 import React from "react";
+import firebase from "firebase/app";
 import ReactDOM from "react-dom";
 import MemoryGame from "./components/MemoryGame";
 import reportWebVitals from "./reportWebVitals";
