@@ -1,19 +1,31 @@
+import React from "react";
+import {Image} from "antd";
 
-import React from "react"
+function SingleCard({card, selectCard, reveal, disableCard}) {
+	function revealCard() {
+		// Only allow 2 selections per turn
+		if (!disableCard) {
+			selectCard(card);
+		}
+	}
 
-function SingleCard({ card, selectCard, reveal, disableCard }) {
-    
-    function revealCard() {
-        // Only allow 2 selections per turn
-        if (!disableCard) {
-            selectCard(card)
-        }
-    }
-
-    return (
-        <div>
-            {reveal ? <img alt="card-front" className="card-front" src={require(`../images/${card.card}.png`).default} /> : <img alt="card-back" className="card-back" onClick={revealCard} src={require("../images/BK.png").default} />}
-        </div>
-    )
+	return (
+		<div className='memory-card-game-single-card-container'>
+			{reveal ? (
+				<Image
+					className='memory-game-card-front'
+					preview={false} // disable preview
+					src={require(`../images/deck/${card.card}.png`)}
+				/>
+			) : (
+				<Image
+					className='memory-game-card-back'
+					onClick={revealCard}
+					preview={false} // disable preview
+					src={require("../images/deck/BK.png")}
+				/>
+			)}
+		</div>
+	);
 }
 export default SingleCard;

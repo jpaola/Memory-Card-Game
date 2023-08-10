@@ -1,0 +1,17 @@
+ .memory-game-card-grid {
+ 	margin: 50px;
+ 	display: grid;
+ 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+ 	gap: 15px;
+ }
+
+ .ant-image-img.memory-game-card-front {
+ 	width: 52%;
+ 	height: 52%;
+ }
+
+ .ant-image-img.memory-game-card-back {
+ 	width: 50%;
+ 	height: 50%;
+ 	cursor: pointer;
+ }
