@@ -16,14 +16,12 @@ function SelectLevel({setLevel}) {
 					style={{width: 200}}
 					onChange={handleChange}
 				>
-					{/* Beginner Deck: 4 matches */}
-					<Option value={4}>Beginner - 4 Pairs</Option>
-					{/* Beginner Deck: 10 matches */}
-					<Option value={10}>Novice - 10 Pairs</Option>
-					{/* Beginner Deck: 20 matches */}
-					<Option value={20}>Intermediate - 20 Pairs</Option>
-					{/* Beginner Deck: 52 matches */}
-					<Option value={52}>Expert - 52 Pairs</Option>
+					{/* Beginner Deck: 10 pairs */}
+					<Option value={10}>Beginner</Option>
+					{/* Beginner Deck: 20 pairs */}
+					<Option value={20}>Intermediate</Option>
+					{/* Beginner Deck: 52 pairs */}
+					<Option value={52}>Expert</Option>
 				</Select>
 			</Space>
 		</Space>

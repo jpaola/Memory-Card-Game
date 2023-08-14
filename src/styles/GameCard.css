@@ -1,17 +1,89 @@
  .memory-game-card-grid {
  	margin: 50px;
- 	display: grid;
- 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
- 	gap: 15px;
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	width: 1300px;
+ }
+
+ .memory-game-card {
+ 	margin: 10px;
  }
 
  .ant-image-img.memory-game-card-front {
- 	width: 52%;
- 	height: 52%;
+ 	width: 50px;
+ 	height: 50px;
  }
 
  .ant-image-img.memory-game-card-back {
- 	width: 50%;
- 	height: 50%;
+ 	width: 50px;
+ 	height: 50px;
  	cursor: pointer;
+ }
+
+
+ /* Media Queries */
+
+ /* 
+   Galaxy S10/S10+ Android 11,
+   Galaxy S20/S20+ Android 11,
+   iPhone 12/13+ Pro iOS 14.6, 
+   iPhone 12/13 mini iOS 14.6, 
+   iPhone SE 2nd gen iOS 14.6 
+*/
+
+ @media screen and (max-width: 399px) {
+ 	.ant-image-img.memory-game-card-front {
+ 		width: 30px;
+ 		height: 30px;
+ 	}
+
+ 	.ant-image-img.memory-game-card-back {
+ 		width: 30px;
+ 		height: 30px;
+ 	}
+
+ 	.memory-game-card-grid {
+ 		margin: 20px;
+ 		width: 320px;
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 		overflow: scroll;
+ 	}
+
+ 	.memory-game-card {
+ 		margin: 5px;
+ 	}
+
+ }
+
+ /*  
+	Galaxy Note 20 Android 11,
+	Galaxy Note 20 Ultra Android 11,
+	Galaxy S20 Ultra Android 11,
+	iPhone 11 Pro iOS 14.6,
+	iPhone 11 Pro Max iOS 14.6,
+	iPhone 12/13 Pro Max iOS 14.6 
+*/
+ @media screen and (min-width: 400px) and (max-width: 799px) {
+ 	.ant-image-img.memory-game-card-front {
+ 		width: 40px;
+ 		height: 40px;
+ 	}
+
+ 	.ant-image-img.memory-game-card-back {
+ 		width: 40px;
+ 		height: 40px;
+ 	}
+
+ 	.memory-game-card-grid {
+ 		margin: 20px;
+ 		width: 350px;
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 		overflow: scroll;
+ 	}
+
+ 	.memory-game-card {
+ 		margin: 5px;
+ 	}
  }

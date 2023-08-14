@@ -1,0 +1,78 @@
+#memory-card-game-title {
+	color: rgb(255, 213, 255);
+	font-size: 70px;
+	margin: 20px 0px 60px;
+}
+
+.memory-game-heading {
+	width: 400px;
+	margin: 20px auto;
+}
+
+.memory-game-subheading {
+	width: 150px;
+	margin: 0 auto;
+}
+
+.footer {
+	background-color: rgb(40, 44, 52);
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 30px;
+}
+
+/* Media Queries */
+
+/* 
+   Galaxy S10/S10+ Android 11,
+   Galaxy S20/S20+ Android 11,
+   iPhone 12/13+ Pro iOS 14.6, 
+   iPhone 12/13 mini iOS 14.6, 
+   iPhone SE 2nd gen iOS 14.6 
+*/
+
+@media screen and (max-width: 399px) {
+	#memory-card-game-title {
+		font-size: 50px;
+		margin: 30px auto;
+		width: 200px;
+		text-align: center;
+	}
+
+	.memory-game-heading {
+		width: 350px;
+	}
+
+	.footer {
+		line-height: 20px;
+	}
+
+}
+
+
+/*  
+	Galaxy Note 20 Android 11,
+	Galaxy Note 20 Ultra Android 11,
+	Galaxy S20 Ultra Android 11,
+	iPhone 11 Pro iOS 14.6,
+	iPhone 11 Pro Max iOS 14.6,
+	iPhone 12/13 Pro Max iOS 14.6 
+*/
+@media screen and (min-width: 400px) and (max-width: 799px) {
+	#memory-card-game-title {
+		font-size: 50px;
+		margin: 30px auto;
+		width: 200px;
+		text-align: center;
+	}
+
+	.memory-game-heading {
+		width: 350px;
+	}
+
+	.footer {
+		line-height: 20px;
+	}
+}

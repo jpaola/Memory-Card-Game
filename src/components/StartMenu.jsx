@@ -13,14 +13,14 @@ function StartMenu({
 		showModal();
 		numberOfPlayers(num);
 	}
-	const [isModalVisible, setIsModalVisible] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const showModal = () => {
-		setIsModalVisible(true);
+		setIsModalOpen(true);
 	};
 
 	const handleCancel = () => {
-		setIsModalVisible(false);
+		setIsModalOpen(false);
 	};
 
 	return (
@@ -47,7 +47,7 @@ function StartMenu({
 			</div>
 			<Modal
 				title='Player Name'
-				visible={isModalVisible}
+				open={isModalOpen}
 				onCancel={handleCancel}
 				footer={null}
 			>

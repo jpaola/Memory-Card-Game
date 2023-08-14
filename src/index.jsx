@@ -1,9 +1,9 @@
 import React from "react";
 import firebase from "firebase/app";
-import ReactDOM from "react-dom";
-import MemoryGame from "./components/MemoryGame";
+import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/index.css";
+import AppLayout from "./components/AppLayout";
 
 firebase.initializeApp({
 	apiKey: "AIzaSyD7EjSE_gijEHbS28CtMhBJr1wZ4xbg0nU",
@@ -18,7 +18,7 @@ firebase.initializeApp({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<MemoryGame />
+		<AppLayout />
 	</React.StrictMode>
 );
 

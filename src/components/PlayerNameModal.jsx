@@ -3,18 +3,18 @@ import {Button, Modal} from "antd";
 import PlayerName from "./PlayerName";
 
 function PlayerNameModal({player1Name, player2Name, multiplayer, beginGame}) {
-	const [isModalVisible, setIsModalVisible] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const showModal = () => {
-		setIsModalVisible(true);
+		setIsModalOpen(true);
 	};
 
 	const handleOk = () => {
-		setIsModalVisible(false);
+		setIsModalOpen(false);
 	};
 
 	const handleCancel = () => {
-		setIsModalVisible(false);
+		setIsModalOpen(false);
 	};
 	console.log("multiplayer: ", multiplayer);
 	return (
@@ -25,7 +25,7 @@ function PlayerNameModal({player1Name, player2Name, multiplayer, beginGame}) {
 
 			<Modal
 				title='Player Names'
-				visible={isModalVisible}
+				open={isModalOpen}
 				onOk={handleOk}
 				onCancel={handleCancel}
 			>

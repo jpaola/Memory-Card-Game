@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import React from "react";
-import {Row, Col, Typography} from "antd";
+import {Typography} from "antd";
 import {createDeck} from "../common";
 import SingleCard from "./SingleCard";
 import SelectLevel from "./SelectLevel";
@@ -225,37 +225,22 @@ function MemoryGame() {
 				{/* Display score once the player/s have chosen number of players */}
 				{/*-------------------------------------------------------*/}
 				{!showPlayerPrompt ? (
-					<div style={{width: "1000px"}}>
-						<Row>
-							<Col
-								span={8}
-								offset={8}
-							>{`Total Matches: ${totalMatches}/${deck.length /
-								2}`}</Col>
-						</Row>
-						<Row>
-							<Col
-								span={8}
-							>{`${player1Name}'s Score: ${player1Score}`}</Col>
-							{twoPlayer ? (
-								<Col span={8} offset={8}>
-									{`${player2Name}'s Score: ${player2Score}`}
-								</Col>
-							) : (
-								<Col span={8} offset={8} />
-							)}
-						</Row>
-						<Row>
-							<Col span={8}></Col>
-							<Col span={4}>
-								{`${
-									currentPlayer === 1
-										? player1Name
-										: player2Name
-								}'s turn`}
-							</Col>
-							<Col span={8}></Col>
-						</Row>
+					<div className='memory-game-heading'>
+						<div className='memory-game-subheading'>{`Matches: ${totalMatches} / ${deck.length /
+							2}`}</div>
+
+						<div className='memory-game-subheading'>
+							{`${player1Name}'s Score: ${player1Score}`}
+							{twoPlayer
+								? `${player2Name}'s Score: ${player2Score}`
+								: null}
+						</div>
+
+						<div className='memory-game-subheading'>
+							{`${
+								currentPlayer === 1 ? player1Name : player2Name
+							}'s turn`}
+						</div>
 					</div>
 				) : null}
 
