@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import React from "react";
-import {Typography} from "antd";
+import {Button, Typography} from "antd";
 import {createDeck} from "../common";
 import SingleCard from "./SingleCard";
 import SelectLevel from "./SelectLevel";
@@ -112,8 +112,6 @@ function MemoryGame() {
       Once the game is over or matches equal player level announce winner
     */
 		if (totalMatches + 1 === level) {
-			console.log("Hi totalMatches: ", totalMatches);
-			console.log("Hi level: ", level);
 			setGameOver(true);
 			if (player1Score > player2Score) {
 				// setWinner("Player 1 won!")
@@ -225,21 +223,30 @@ function MemoryGame() {
 				{/* Display score once the player/s have chosen number of players */}
 				{/*-------------------------------------------------------*/}
 				{!showPlayerPrompt ? (
-					<div className='memory-game-heading'>
-						<div className='memory-game-subheading'>{`Matches: ${totalMatches} / ${deck.length /
-							2}`}</div>
-
-						<div className='memory-game-subheading'>
-							{`${player1Name}'s Score: ${player1Score}`}
-							{twoPlayer
-								? `${player2Name}'s Score: ${player2Score}`
-								: null}
+					<div className='memory-game-in-game-header'>
+						<div className='memory-game-ingame-menu'>
+							<Button type='primary' block onClick={beginGame}>
+								New Game
+							</Button>
 						</div>
+						<div className='memory-game-heading'>
+							<div className='memory-game-subheading'>{`Matches: ${totalMatches} / ${deck.length /
+								2}`}</div>
 
-						<div className='memory-game-subheading'>
-							{`${
-								currentPlayer === 1 ? player1Name : player2Name
-							}'s turn`}
+							<div className='memory-game-subheading'>
+								{`${player1Name}'s Score: ${player1Score}`}
+								{twoPlayer
+									? `${player2Name}'s Score: ${player2Score}`
+									: null}
+							</div>
+
+							<div className='memory-game-subheading'>
+								{`${
+									currentPlayer === 1
+										? player1Name
+										: player2Name
+								}'s turn`}
+							</div>
 						</div>
 					</div>
 				) : null}

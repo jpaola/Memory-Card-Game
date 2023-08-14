@@ -9,3 +9,13 @@
 	color: white;
 	width: inherit;
 }
+
+.memory-game-ingame-menu {
+	display: inline-block;
+	width: 200px;
+	margin: 0 auto;
+}
+
+.memory-game-in-game-header {
+	text-align: center;
+}
